@@ -33,3 +33,26 @@ snippet dependency "jar dependency"
 	<version>${3:version}</version>
 </dependency>
 endsnippet
+
+snippet shade "maven-shade-plugin"
+<build>
+	<plugins>
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-shade-plugin</artifactId>
+			<version>3.2.0</version>
+			<configuration>
+			<!-- put your configurations here -->
+			</configuration>
+			<executions>
+				<execution>
+					<phase>package</phase>
+					<goals>
+					<goal>shade</goal>
+					</goals>
+				</execution>
+			</executions>
+		</plugin>
+	</plugins>
+</build>
+endsnippet
